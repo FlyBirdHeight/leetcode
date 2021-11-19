@@ -46,31 +46,4 @@ var getC = function (char, arr) {
     return res;
 }
 
-// console.log(letterCombinations("2345"));
-
-var letterCombinations1 = function(digits) {
-    const k = digits.length;
-    const map = ["","","abc","def","ghi","jkl","mno","pqrs","tuv","wxyz"];
-    if(!k) return [];
-    if(k === 1) return map[digits].split("");
-
-    const res = [], path = [];
-    backtracking(digits, k, 0);
-    return res;
-
-    function backtracking(n, k, a) {
-        // console.log(n, a)
-        if(path.length === k) {
-            // console.log(path);
-            res.push(path.join(""));
-            return;
-        }
-        for(const v of map[n[a]]) {
-            path.push(v);
-            backtracking(n, k, a + 1);
-            path.pop();
-        }
-
-    }
-};
-console.log(letterCombinations1("2345"));
+console.log(letterCombinations("2345"));
