@@ -20,7 +20,7 @@ var longestPalindrome = function (s) {
         let len1 = aroundCenter(s, i, i);
         let len2 = aroundCenter(s, i, i + 1);
         mLen = Math.max(Math.max(len1, len2), mLen);
-        if (mLen > end - start) {
+        if (mLen > end - start + 1) {
             start = i - parseInt((mLen - 1) / 2);
             end = i + parseInt(mLen / 2);
         }
