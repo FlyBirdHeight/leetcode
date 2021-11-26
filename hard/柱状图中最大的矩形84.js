@@ -1,4 +1,4 @@
-//TAG 单调栈
+//TAG 单调栈 单调递减栈 单调递减栈就是从栈底到栈顶数据是从小到大
 /**
  * @param {number[]} heights
  * @return {number}
