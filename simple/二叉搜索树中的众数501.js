@@ -17,7 +17,7 @@ var findMode = function (root) {
     let max = -Infinity;
     let res = [];
     function bst(node) {
-        if (!node) {
+        if (node == null) {
             return;
         }
         bst(node.left);
