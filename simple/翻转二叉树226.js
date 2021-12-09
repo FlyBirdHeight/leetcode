@@ -21,7 +21,6 @@ var invertTree = function (root) {
         dfs(root.left);
         dfs(root.right);
     }
-
     dfs(root)
 
     return root;
