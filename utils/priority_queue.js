@@ -46,7 +46,6 @@ class PriorityQueue {
      * @param {*} index 
      */
     _child(index) {
-        console.log("child:", index, index << 1 + 1)
         return (index << 1) + 1
     }
 

@@ -5,7 +5,6 @@
 var scheduleCourse = function (courses) {
     let t = 0;
     courses.sort((a, b) => a[1] - b[1]);
-    console.log(courses)
     const pq = new PriorityQueue();
     for (let value of courses) {
         if (value[0] > value[1]) {
@@ -69,7 +68,6 @@ class PriorityQueue {
      * @param {*} index 
      */
     _child(index) {
-        console.log("child:", index, index << 1 + 1)
         return (index << 1) + 1
     }
 
