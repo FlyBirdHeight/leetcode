@@ -8,25 +8,25 @@ class PriorityQueue {
     }
 
     /**
-     * @method peek 返回堆顶最大元素 
+     * @method top 返回堆顶最大元素 
      */
-    peek() {
+    top() {
         return this.size === 0 ? null : this.data[0]
     }
 
     /**
-     * @method offer 添加入优先队列中，同时对齐进行提升操作
+     * @method set 添加入优先队列中，同时对齐进行提升操作
      * @param {number} val 
      */
-    offer(val) {
+    set(val) {
         this.data.push(val)
         this._shifUp(this.size++)
     }
 
     /**
-     * @method poll 弹出堆顶元素，并且进行层级变换，维护优先队列堆顶
+     * @method pop 弹出堆顶元素，并且进行层级变换，维护优先队列堆顶
      */
-    poll() {
+    pop() {
         if (this.size === 0) { return null }
         this._swap(0, --this.size)
         this._shifDown(0)
