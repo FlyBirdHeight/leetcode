@@ -10,7 +10,6 @@ Trie.prototype.insert = function(word) {
         }
         node = node[ch];
     }
-    console.log(this.children)
     node.isEnd = true;
 };
 
