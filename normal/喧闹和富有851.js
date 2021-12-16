@@ -15,6 +15,7 @@ var loudAndRich = function(richer, quiet) {
         g[r[0]].push(r[1]);
         ++inDeg[r[1]];
     }
+    console.log(g)
     const ans = new Array(n).fill(0);
     for (let i = 0; i < n; ++i) {
         ans[i] = i;
