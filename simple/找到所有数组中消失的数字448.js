@@ -19,8 +19,6 @@ var findDisappearedNumbers = function (nums) {
     return res;
 };
 
-
-
 var findDisappearedNumbers02 = function (nums) {
     let len = nums.length;
     for(let i = 0; i < len; i++){
@@ -36,7 +34,7 @@ var findDisappearedNumbers02 = function (nums) {
     for(let i = 0; i < len; i++){
         if(nums[i] != i + 1) res.push(i + 1);
     }
-    console.log(res);
+    return res;
 }
 
 console.log(findDisappearedNumbers02([4, 3, 2, 7, 8, 2, 3, 1]))

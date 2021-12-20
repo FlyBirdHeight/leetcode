@@ -1,5 +1,5 @@
-while(numBottles != 0){
-    //     l = numBottles - Math.ceil(numBottles / numExchange);
-    //     numBottles = Math.floor(numBottles / numExchange) + l;
-    //     console.log(numBottles)
+for (let i = 0; i < map.length; i++) {
+    //     if (map[i] == 0) {
+    //         return i + 1;
+    //     }
     // }
