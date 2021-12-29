@@ -5,11 +5,21 @@
  * @return {number}
  */
 var movingCount = function (m, n, k) {
-    let map = new Array(m).fill(0);
-    for (let i = 0; i < m; i++) {
-        map[i] = new Array(n).fill(0);
+    function getSum(v) {
+        let row = i.toString().split("");
+        let col = j.toString().split("");
+        let sum = 0;
+        row.map(v => {
+            sum += Number(v);
+        })
+        col.map(v => {
+            sum += Number(v)
+        })
+        return sum;
     }
-    console.log(map);
+    let res = 0;
+
+    return res;
 };
 
-console.log(movingCount(2, 3, 1))
+console.log(movingCount(100, 100, 1))
