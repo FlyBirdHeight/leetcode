@@ -11,3 +11,5 @@ var hammingWeight = function(n) {
 
     return res;
 };
+
+console.log(1 & 1, 1 & 0, 0 & 0)
