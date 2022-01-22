@@ -14,7 +14,6 @@ var spiralOrder = function (matrix) {
     let h = 0, s = 0;
     let res = [];
     while (num < col * row) {
-        console.log(h, s)
         res.push(matrix[h][s])
         record[h][s] = 1;
         if (t == 0) {
