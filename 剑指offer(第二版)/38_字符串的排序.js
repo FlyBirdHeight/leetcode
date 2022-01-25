@@ -2,18 +2,18 @@
  * @param {string} s
  * @return {string[]}
  */
-var permutation = function(s) {
+var permutation = function (s) {
     let res = [], vis = [];
     let len = s.length;
     let a = Array.from(s).sort();
     let bfs = (arr, i, n, per) => {
-        if(i == len){
+        if (i == len) {
             res.push(per.toString())
             return;
         }
-        for(let j = 0; j < n; j++){
+        for (let j = 0; j < n; j++) {
             //如果存在重复的字符，那么可以在回溯中直接排除掉，可以判断当前字符是否是最左边的字符，且是未被遍历过的
-            if(vis[j] || (j > 0 && vis[j - 1] == false && arr[j - 1] == a[j])){
+            if (vis[j] || (j > 0 && vis[j - 1] == false && arr[j - 1] == a[j])) {
                 continue;
             }
             vis[j] = true;
@@ -34,4 +34,38 @@ var permutation = function(s) {
     return recArr;
 };
 
-console.log(permutation("abc"));
+
+
+
+/**
+ * @param {string} s
+ * @return {string[]}
+ */
+var permutation2 = function (s) {
+    let res = [], vis = [];
+    let len = s.length;
+    let a = s.split("").sort();
+    let bfs = (a, i, n, pre) => {
+        if (i == n) {
+            res.push(pre.join(""));
+            return;
+        }
+
+        for (let j = 0; j < n; j++) {
+            if (vis[j] || (j > 0 && !vis[j - 1]) && a[j - 1] == a[j]) {
+                continue;
+            }
+            vis[j] = true;
+            pre.push(a[j]);
+            bfs(a, i + 1, n, pre);
+            pre.pop();
+            vis[j] = false;
+        }
+    }
+
+    bfs(a, 0, len, []);
+    
+    return res;
+};
+
+console.log(permutation2("abc"));
