@@ -19,10 +19,12 @@
  
      while (queue.length > 0) {
          const nxt = new Array()
+         //多源的话，加法就不要放在里面了，而是在外面来处理
          cost++
          for (const point of queue) {
              for (const dir of DIRS) {
                  const nx = point[0] + dir[0], ny = point[1] + dir[1]
+                 //isWater[nx][ny] > cost就代表的是他不是海面而是陆地
                  if (nx >= 0 && ny >= 0 && nx < m && ny < n && isWater[nx][ny] > cost) {
                      isWater[nx][ny] = cost
                      nxt.push([nx, ny])
