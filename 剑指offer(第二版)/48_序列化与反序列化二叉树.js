@@ -1,8 +1,8 @@
-var serialize = function(root) {
+var serialize = function (root) {
     return rserialize(root, '');
 };
 
-var deserialize = function(data) {
+var deserialize = function (data) {
     const dataArray = data.split(",");
     return rdeserialize(dataArray);
 };
